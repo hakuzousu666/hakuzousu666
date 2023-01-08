@@ -26,6 +26,7 @@ void xuyan() {
 }
 
 int main() {
+	MessageBox(0,"git源码查阅\nhttps://github.com/hakuzousu666/hakuzousu666\n点击确定开始殴打陈洛","made by white_fox",MB_OK|MB_ICONINFORMATION);
 	xuyan();
 	for(; whp|dhp>0;) {
 		cout << "\n输入指令1攻击陈洛,你目前的攻击伤害为：" << ak << "。\n" << endl ;
@@ -36,7 +37,7 @@ int main() {
 			ak++;
 			cout << "\n陈洛的剩余hp:" << dhp << endl ;
 		} else {
-			MessageBox(0,"无效指令\n请输入指定命令。","警告",MB_OK|MB_ICONERROR);
+			MessageBox(0,"无效指令\n请输入指定命令。","ERROR!",MB_OK|MB_ICONERROR);
 		}
 		if(whp<=0) {
 			cout << "你已死亡" << endl;
