@@ -10,6 +10,7 @@
 #include <windows.h>
 #include <iostream>
 #include <string>
+#include <stdlib.h>
 using namespace std;
 int cdi,cdsec;
 void xuyan();//序言
@@ -63,7 +64,6 @@ int main()
 			ak++;
 			whp=whp-dak;
 			wbf=(whp/whpmax)*100;
-
 			cout << "\n你被陈洛打了一巴掌，对你造成了" << dak << "伤害\n" << endl;
 			cout << "你的剩余生命 " << whp << "(" << wbf << "%)" << endl;   
 			dak--;
