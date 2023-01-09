@@ -1,9 +1,9 @@
 /*
-	Name: °×ºü´óÕ½³ÂÂå
+	Name: ç™½ç‹å¤§æˆ˜é™ˆæ´›
 	Copyright:
-	Author:°×ºü
+	Author:ç™½ç‹
 	Date: 07/01/23 16:59
-	Description: 0.1°æ±¾
+	Description: 0.1ç‰ˆæœ¬
 */
 
 #include <stdio.h>
@@ -13,17 +13,17 @@
 #include <stdlib.h>
 using namespace std;
 int cdi,cdsec;
-void xuyan();//ĞòÑÔ
+void xuyan();//åºè¨€
 float wbf,dbf;
-void bat();//Õ½¶·
-void exp();//Ô¤ÏÈ±£Áô£¬Î´À´×ö¾­ÑéÖµ
+void bat();//æˆ˜æ–—
+void exp();//é¢„å…ˆä¿ç•™ï¼Œæœªæ¥åšç»éªŒå€¼
 void hpmax();
 void removehandle();
 int ak=35,whp=1039,dhp=1024,dak=36,whpmax,
-    dhpmax;//ÎÒ·½¹¥»÷£¬ÎÒ·½hp£¬µĞ·½HP,µĞ·½¹¥»÷£¬×î´óÉúÃüÖµ
-int self,enemy;//¶¨ÒåÎÒ·½ºÍµĞ·½ĞĞÎª
-int y,m,d;//±³¾°
-int wfys,dfys;//ÎÒ·½ÒÑËğ£¬µĞ·½Ò×Ëğ
+    dhpmax;//æˆ‘æ–¹æ”»å‡»ï¼Œæˆ‘æ–¹hpï¼Œæ•Œæ–¹HP,æ•Œæ–¹æ”»å‡»ï¼Œæœ€å¤§ç”Ÿå‘½å€¼
+int self,enemy;//å®šä¹‰æˆ‘æ–¹å’Œæ•Œæ–¹è¡Œä¸º
+int y,m,d;//èƒŒæ™¯
+int wfys,dfys;//æˆ‘æ–¹å·²æŸï¼Œæ•Œæ–¹æ˜“æŸ
 void removehandle()
 {
 	HANDLE hStdin = GetStdHandle(STD_INPUT_HANDLE);
@@ -35,10 +35,10 @@ void removehandle()
 void xuyan()
 {
 	y=2023,m=3,d=12;
-	printf("¹ÊÊÂ·¢ÉúÔÚÆ½ĞĞÓîÖæµÄ");
-	cout << y << "Äê" << m << "ÔÂ" << d << "ÈÕ" << endl ;
-	printf("³ÂÂå±»ÃğÍñÇıÖğÒÔºóÒâÍ¼¸´³ğ,ÓÚÊÇ±ãÆÆ»µÍ£Õ½ÌõÔ¼ÏòÃğÍñÁìÍÁ\n´ó¾Ù½ø¹¥¡£");
-	cout << "µ«°×ºü²»»á×øÊÓ²»¹Ü£¬ÓÚÊÇ´øÉÏÁËÎäÆ÷È¥×è»÷³ÂÂå\n\n" << endl;
+	printf("æ•…äº‹å‘ç”Ÿåœ¨å¹³è¡Œå®‡å®™çš„");
+	cout << y << "å¹´" << m << "æœˆ" << d << "æ—¥" << endl ;
+	printf("é™ˆæ´›è¢«ç­å©‰é©±é€ä»¥åæ„å›¾å¤ä»‡,äºæ˜¯ä¾¿ç ´ååœæˆ˜æ¡çº¦å‘ç­å©‰é¢†åœŸ\nå¤§ä¸¾è¿›æ”»ã€‚");
+	cout << "ä½†ç™½ç‹ä¸ä¼šåè§†ä¸ç®¡ï¼Œäºæ˜¯å¸¦ä¸Šäº†æ­¦å™¨å»é˜»å‡»é™ˆæ´›\n\n" << endl;
 }
 void hpmax()
 {
@@ -48,14 +48,14 @@ void hpmax()
 int main()
 {
 	MessageBox(0,
-	           "gitÔ´Âë²éÔÄ\nhttps://github.com/hakuzousu666/hakuzousu666\nµã»÷È·¶¨¿ªÊ¼Å¹´ò³ÂÂå",
+	           "gitæºç æŸ¥é˜…\nhttps://github.com/hakuzousu666/hakuzousu666\nç‚¹å‡»ç¡®å®šå¼€å§‹æ®´æ‰“é™ˆæ´›",
 	           "made by white_fox",MB_OK|MB_ICONINFORMATION);
 	removehandle();
 	
 	xuyan();
 	hpmax();
 	for(; whp|dhp>0;) {
-		cout << "\nÊäÈëÖ¸Áî1¹¥»÷³ÂÂå,2±©»÷³ÂÂå,ÄãÄ¿Ç°µÄ¹¥»÷ÉËº¦Îª£º" << ak << "¡£\n" <<
+		cout << "\nè¾“å…¥æŒ‡ä»¤1æ”»å‡»é™ˆæ´›,2æš´å‡»é™ˆæ´›,ä½ ç›®å‰çš„æ”»å‡»ä¼¤å®³ä¸ºï¼š" << ak << "ã€‚\n" <<
 		     endl ;
 		cin >> self;
 		if(self==1) {
@@ -64,31 +64,31 @@ int main()
 			ak++;
 			whp=whp-dak;
 			wbf=(whp/whpmax)*100;
-			cout << "\nÄã±»³ÂÂå´òÁËÒ»°ÍÕÆ£¬¶ÔÄãÔì³ÉÁË" << dak << "ÉËº¦\n" << endl;
-			cout << "ÄãµÄÊ£ÓàÉúÃü " << whp << "(" << wbf << "%)" << endl;   
+			cout << "\nä½ è¢«é™ˆæ´›æ‰“äº†ä¸€å·´æŒï¼Œå¯¹ä½ é€ æˆäº†" << dak << "ä¼¤å®³\n" << endl;
+			cout << "ä½ çš„å‰©ä½™ç”Ÿå‘½ " << whp << "(" << wbf << "%)" << endl;  //ä»¤æˆ‘éš¾ä»¥ç›¸ä¿¡çš„æ˜¯ä»–å±…ç„¶æ²¡æ˜¾ç¤ºç™¾åˆ†æ¯”ï¼Œéš¾èšŒ 
 			dak--;
-			cout << "\n³ÂÂåµÄÊ£Óàhp:" << dhp << endl;
+			cout << "\né™ˆæ´›çš„å‰©ä½™hp:" << dhp << endl;
 
 		}
 
 		if(self==2) {
 			self=0;
-			//ÒÑËğÊ§ÉúÃüÖµ=£¨×î´óÑªÁ¿-µ±Ç°ÑªÁ¿£©*°Ù·Ö±È
+			//å·²æŸå¤±ç”Ÿå‘½å€¼=ï¼ˆæœ€å¤§è¡€é‡-å½“å‰è¡€é‡ï¼‰*ç™¾åˆ†æ¯”
 			dfys=(dhpmax-dhp)*0.12;
 			dhp=dhp-dfys;
-			cout << "±©»÷À±£¡Äã¶Ô³ÂÂåÔì³ÉÁË " << dfys << "ÉËº¦£¡" << endl;
-			cout << "\n³ÂÂå£¨±¾´Î²»»¹»÷£©µÄÊ£Óàhp:" << dhp << "  ,ÄãµÄÊ£ÓàÉúÃü " << whp <<
+			cout << "æš´å‡»è¾£ï¼ä½ å¯¹é™ˆæ´›é€ æˆäº† " << dfys << "ä¼¤å®³ï¼" << endl;
+			cout << "\né™ˆæ´›ï¼ˆæœ¬æ¬¡ä¸è¿˜å‡»ï¼‰çš„å‰©ä½™hp:" << dhp << "  ,ä½ çš„å‰©ä½™ç”Ÿå‘½ " << whp <<
 			     "\n" << endl;
 		}
 		if(self>2|self<0) {
-			MessageBox(0,"ÎŞĞ§Ö¸Áî\nÇëÊäÈëÖ¸¶¨ÃüÁî¡£","ERROR!",MB_OK|MB_ICONERROR);
+			MessageBox(0,"æ— æ•ˆæŒ‡ä»¤\nè¯·è¾“å…¥æŒ‡å®šå‘½ä»¤ã€‚","ERROR!",MB_OK|MB_ICONERROR);
 		}
 		if(whp<=0) {
-			cout << "ÄãÒÑËÀÍö" << endl;
+			cout << "ä½ å·²æ­»äº¡" << endl;
 			break;
 		}
 		if(dhp<=0) {
-			cout << "³ÂÂåÒÑ¾­ËÀÍö£¬ºÃËÀ£¬¿ªÏãéÄ£¡"  << endl;
+			cout << "é™ˆæ´›å·²ç»æ­»äº¡ï¼Œå¥½æ­»ï¼Œå¼€é¦™æ§Ÿï¼"  << endl;
 			break;
 		}
 	}
